@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login/home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, rgba(255, 69, 0, 0.8), black); /* Sunset-like background */
+            color: #fff;
+            width: 250px;
+            position: fixed;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .logo-image {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        
+        .menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 10px 0;
+        }
+
+        .menu a {
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            transition: background-color 0.3s;
+            font-size: 24px;
+            display: block;
+            padding-left: 30px;
+        }
+
+        .menu a.active {
+            padding-top: 10px ;
+            padding-bottom: 10px;
+            background-color: #454545;
+        }
+        
+        .menu a:hover {
+            color: black;
+            /* background-color: black; */
+        }
+
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #454545;
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 250px; /* Set the width to match the navbar's width */
+        }
+
+        .section {
+            position: absolute;
+            top: 0;
+            left: 250px; /* Width of the navbar */
+            width: calc(100% - 250px);
+            height: 100%;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .objective-box {
+            align-items: center;
+            background: rgba(255, 69, 0, 0.7); /* Translucent sunset color (adjust the alpha value as needed) */
+            width: 50%;
+            border-radius: 10px; /* Rounded corners */
+            padding: 10px; /* Padding is the same on all sides */
+            margin: 0 auto; /* Center the box horizontally */
+            text-align: justify;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            width: 100%; 
+            margin-right: 75px; 
+        }
+
+        .rating {
+            text-decoration: none;
+            display: block;
+            width: 50%;
+            height: fit-content;
+            margin: 5px;
+            padding: 5px;
+            padding-top: 5px;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .rating:hover {
+            transform: scale(1.1);
+            background-color: #333;
+        }
+
+        /* CSS for the submenu */
+        .submenu-container .submenu {
+            display: none;
+        }
+
+        .submenu-container:hover .submenu {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>
+            <img src="logo.png" alt="Me" class="logo-image" style="margin-top: 20px;">
+            
+            <ul class="menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#suggestions">Suggestions</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+            
+        </div>
+        <div class="footer">
+            <p>&copy; Tour Recommendation</p>
+        </div>
+    </div>
+    <div class="content">
+        <!-- Your content sections go here -->
+        <section id="home" class="section" style="background-image: url(bg.jpg); background-size: cover; background-repeat: no-repeat;">
+            <div class="home-content">
+                <h1 style="text-align: center; font-size: 36px;">EPIC Destinations</h1>
+                <p style="text-align: center; font-size: 24px;">Tour Recommendation</p>
+        
+                <div class="objective-box">
+                    <ul><span style="font-weight: bold">Welcome to EPIC Destinations: Your Ultimate Travel Companion</span>
+                    <p>At EPIC Destinations, we redefine the art of travel planning, setting new standards for your adventures. Our name, "EPIC," encapsulates the essence of our platform, making it your go-to travel companion.</p> 
+                    <p style="font-weight: bold">Enhanced Personalized Itinerary Curation</p>
+                    </ul>
+                    <ul><li><span style="font-weight: 550;">Enhanced Adventures Await: </span>
+                        <br>Imagine travel recommendations that go beyond the ordinary. With EPIC Destinations, expect more than just the run-of-the-mill suggestions. We enhance your journeys with carefully curated experiences that enrich your exploration.</li>
+                        <li><span style="font-weight: 550;">Personalized for You: </span>
+                        <br>No two travelers are the same, and neither should their journeys be. We believe in the power of personalization. Our collaborative filtering technology tailors every recommendation to your unique preferences, ensuring your trips are a reflection of your dreams.</li>
+                        <li><span style="font-weight: 550;">Your Dream Itinerary: </span>
+                        <br>EPIC Destinations is more than a list of places to visit; it's your personal travel architect. We understand that a remarkable journey is not just about destinations but the entire adventure. Our focus is on crafting complete itineraries that encompass the essence of your wanderlust.</li>
+                        <li><span style="font-weight: 550;">Curation at Its Finest: </span>
+                        <br>In the heart of our system lies the art of curation. Our recommendations are born from the collective wisdom of our global community of travelers. Every suggestion is meticulously curated, ensuring that only the best, most authentic experiences find their way to your itinerary.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="content">
+        <!-- Your content sections go here -->
+        <section id="suggestions" class="section" style="background-image: url(bg.jpg); background-size: cover; background-repeat: no-repeat;">
+            <div class="suggestions-content">
+                <h1 style="text-align: center; font-size: 36px;">Suggestions</h1>
+    
+                <div class="objective-box" style="padding: 30px;">
+    
+                    <p><span style="font-weight: bold">Welcome to Suggestions Section!!!</span><br>In this section, we are delighted to offer you travel recommendations tailored to the changing seasons, ensuring that your adventures are perfectly timed. Whether you prefer the warmth of summer, the allure of the rainy season, or the cozy charm of winter, we've got you covered. Our seasonal suggestions aim to enhance your travel experiences with carefully curated destinations and activities that match the unique beauty and offerings of each season.<br>Additionally, we present a special category, '7 Wonders India,' where we showcase the awe-inspiring marvels of our incredible country- India. These destinations have been celebrated for their historical significance, architectural grandeur, and cultural importance. When you're ready to explore India's iconic landmarks, our recommendations will be your ideal guide, offering insights and tips to make your visit truly unforgettable.</p>
+                    <br>
+                    <div class="options">
+                        <a href="#" class="rating" style="width: fit-content;">7 Wonders India</a>
+                        <div class="submenu-container">
+                            <a href="javascript:void(0)" class="rating" style="width: fit-content;">Seasonal Escapes &#9660;</a>
+                            <ul class="submenu">
+                                <li><a href="summer/index.html" class="rating">Summer</a></li>
+                                <li><a href="#rainy" class="rating">Rainy</a></li>
+                                <li><a href="#winter" class="rating">Winter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </div>    
+        
+    <script>
+        // JavaScript to handle menu background change
+        const sections = document.querySelectorAll('.section');
+        const links = document.querySelectorAll('.menu a');
+
+        function showSection(target) {
+            sections.forEach(section => {
+                section.style.transform = 'translateX(100%)';
+            });
+            target.style.transform = 'translateX(0)';
+        }
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+
+                if (target) {
+                    showSection(target);
+                    // Remove the "active" class from all links
+                    links.forEach(link => link.classList.remove('active'));
+                    // Add the "active" class to the clicked link
+                    link.classList.add('active');
+                }
+            });
+        });     
+
+        // Show the home section by default when the page loads
+        showSection(sections[0]);
+    </script>
+     
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Epic Destinations</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-9Z5z5l5iWFLj5w5nxB5PZ5n5Tv5UI5T5P5I5bs5P5i5s5T5S5Z5M5m5I5t5a5z5e5r5" crossorigin="anonymous">
+    
+    <style>
+        /* Styles for the section with a background image */
+        .header-section {
+            background: url('background-image.png') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            width: 1480px;
+            height: 833px;
+            color: #fff;
+            margin: 0 auto; /* Center the section horizontally */
+        }
+
+        #logo {
+            width: 50px !important; /* Adjust the width as needed */
+            height: auto;
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            margin: 5px;
+        }
+
+
+        /* Styles for the navigation bar */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            width: 1480px; /* Set the width to match the background image */
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            font-size: x-large;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .content {
+            max-width: 1480px; /* Set the maximum width for all sections */
+            margin: 0 auto;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(255, 69, 0, 0.8), black); /* Sunset-like background */
+            display: flex;
+        }
+        
+        .content-text {
+            flex: 1;
+            padding: 20px;
+            text-align: justify; /* Justify the text within the paragraph */
+            color: #fff; /* Set text color to white */
+        }
+
+        .content-text h2 {
+            color: #333; /* Text color for the header */
+        }
+
+        .content-text p {
+            width: 100%; /* Set paragraph width to 100% */
+            line-height: 1.5; /* Adjust line spacing as needed */
+        }
+
+        .content-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .content-image img {
+            max-width: 50%;
+            height: auto;
+        }
+
+        /* Style for the login and registration forms */
+        .form-container {
+            max-width: 300px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #555;
+        }
+
+        .form-container a {
+            text-align: center;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <body>
+        <header>
+            <img src="logo.png" alt="Logo" id="logo">
+            <!-- Navigation bar -->
+            <div class="navbar">
+                <a onclick="toggleSection('login')" style="float: right;">Login</a>
+                <a onclick="toggleSection('about')" style="float: right;">About Us</a>
+                <a onclick="toggleSection('services')" style="float: right;">Services</a>
+                <a onclick="toggleSection('home')" style="float: right;">Home</a>
+            </div>
+        </header>
+    <!-- Section with a background image -->
+    <div class="header-section">
+        <!-- You can add additional content or elements here -->
+    </div>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a onclick="toggleSection('home')">Home</a>
+        <a onclick="toggleSection('services')">Services</a>
+        <a onclick="toggleSection('about')">About Us</a>
+        <a onclick="toggleSection('login')">Login</a>
+    </div>
+
+    <!-- Content for Home section -->
+    <div class="content" id="home">
+        <div class="content-text">
+            <h2>Welcome to Epic Destinations</h2>
+            <p>Tourism is a successful industry globally, offering a welcome break from our daily routines. However, planning a tour can be a daunting and time-consuming task. Relying solely on recommendations from friends limits our options to their personal experiences, while travel agents may have biased suggestions aimed at selling packages. Navigating the vast expanse of the internet for research often leaves travelers frustrated and overwhelmed. To address these challenges, we propose Epic Destinations, an intelligent tour recommendation system that utilizes machine learning to provide personalized suggestions for travelers. Our website optimizes itineraries, recommends the best places to visit, and offers insights on hotels, local cuisine, ideal timings, and transportation options. By leveraging advanced algorithms and data analysis, Epic Destinations considers factors such as user feedback, popular attractions, local events, and travel patterns to ensure accurate and unbiased recommendations that cater to individual preferences. Therefore, through the power of machine learning, our website enhances the overall travel experience, empowering users to optimize their adventures and create unforgettable memories.</p>
+        </div>
+        <div class="content-image">
+            <img src="home-image.jpg" alt="Home Image">
+        </div>
+    </div>
+
+    <!-- Content for Services section -->
+    <div class="content" id="services">
+        <div class="content-text">
+            <h2>Our Services</h2>
+            <ul>
+                <li><span style="font-weight: bold;">Tailored Travel Recommendations:</span><br>Describe how your platform provides personalized travel recommendations based on users' preferences, ensuring they have a unique and enjoyable experience.</li>
+                <li><span style="font-weight: bold;">Effortless Itinerary Planning:</span><br>Highlight how your service streamlines the often complicated process of planning a trip, making it hassle-free for users.</li>
+                <li><span style="font-weight: bold;">Accommodation Guidance:</span><br>Explain how your platform suggests accommodations that match users' criteria, whether they're looking for luxury resorts or budget-friendly hostels.</li>
+                <li><span style="font-weight: bold;">Culinary Adventures:</span><br>Discuss your platform's ability to recommend local restaurants and dishes, allowing travelers to savor authentic flavors at their destination.</li>
+                <li><span style="font-weight: bold;">Optimal Timing:</span><br>Mention how your system suggests the best times to visit specific locations, factoring in weather, special events, and seasonal attractions.</li>
+                <li><span style="font-weight: bold;">Smooth Transportation:</span><br>Emphasize your platform's guidance on transportation options, from flight bookings to local commuting, making travel logistics a breeze.</li>
+                <li><span style="font-weight: bold;">User Reviews and Insights:</span><br>Explain how your platform incorporates user reviews and feedback to provide reliable and trustworthy recommendations.</li>
+                <li><span style="font-weight: bold;">Exploration of Top Attractions:</span><br>Detail how users can explore renowned tourist spots and discover lesser-known, off-the-beaten-path gems through your service.</li>
+                <li><span style="font-weight: bold;">Local Culture and Events:</span><br>Describe how your platform offers insights into the local culture, traditions, and upcoming events at the travel destination.</li>
+                <li><span style="font-weight: bold;">Adaptability and Trends:</span><br>Highlight your platform's ability to adapt to evolving travel trends and user preferences, ensuring that recommendations remain relevant and up-to-date.</li>
+            </ul>
+        </div>
+        <div class="content-image">
+            <img src="services-image.jpg" alt="Services Image">
+        </div>
+    </div>
+
+    <!-- Content for About Us section -->
+    <div class="content" id="about">
+        <div class="content-text">
+            <h2>About Us</h2>
+            <ul>
+                <li><span style="font-weight: bold;">Project Overview:</span><br>Traveling is wonderful, but planning a trip can be hard. You might ask friends, but their suggestions are limited. Travel agents can be biased, and searching the internet can be overwhelming. That's where Epic Destinations comes in. We use smart technology to give you personalized travel recommendations. Our website plans your trip, tells you where to go, and helps with hotels, food, and timing. We use data and clever math to make sure our tips are just right for you. So, with our help, your trips become amazing adventures filled with unforgettable memories.</li>
+                <li><span style="font-weight: bold;">Project Guide:</span> Dr. D. Jaya Kumari (HOD of CSE Dept.)</li>
+                <li><span style="font-weight: bold;">Project Team:</span>
+                    <ul>
+                        <li><span style="font-weight: bold;">21A81A0501- A.Haritha</span></li>
+                        <li>21A81A0546- P.Divya Priyanka</li>
+                        <li>21A81A0552- S.Harshitha</li>
+                        <li>21A81A0534- P.Adithya</li>
+                        <li>21A81A0541- P.Hema Vamsi</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight: bold;">Project Objectives:</span>
+                    <ul>
+                        <li><span style="font-weight: bold;">Personalized Planning:</span> Create a system that understands users' interests and behaviors to offer personalized travel plans, considering their preferences, past trips, and available time.</li>
+                        <li><span style="font-weight: bold;">Impartial Suggestions:</span> Develop algorithms that provide fair and varied travel recommendations, reducing personal biases and financial motivations often present in traditional advice sources.</li>
+                        <li><span style="font-weight: bold;">Real-Time Adaptability:</span> Build a system that adjusts recommendations based on users' inputs, ensuring plans stay relevant and adaptable to changing situations, enhancing the overall travel experience.</li>
+                        <li><span style="font-weight: bold;">User-Friendly Interface:</span> Design an easy-to-use platform where users can input preferences, receive practical itineraries, and provide feedback for ongoing enhancement.</li>
+                    </ul>
+                </li>
+                <li><span style="font-weight: bold;">Methodology:</span><br>We use an Agile approach to build our Personalized Travel Recommendation System. We start by asking what users want and need. We collect data to understand users better. Then, we create the main parts of the system and test them. Users tell us what's good and what needs to change. We make sure your data is safe. We connect our system to other travel services, test everything, and make it work. We keep learning from users and improving the system. This way, we give you a safe, flexible, and useful travel recommendation system.</li>
+                <li><span style="font-weight: bold;">Contact Information:</span><br><span style="font-weight: bold;">Email: </span><a href="mailto:adapaharitha21@gmail.com" style="text-decoration: blue;">adapaharitha21@gmail.com</a></li>
+                <!-- <li><span style="font-weight: bold;">References: </span><br></li> -->
+            </ul>
+        </div>
+        <div class="content-image">
+            <img src="about.jpg" alt="About Image">
+        </div>
+    </div>
+    
+    <!-- Content for Login section -->
+<div class="content" id="login">
+    <div class="content-text">
+        <div class="form-container" id="signin">
+            <h2>Sign In</h2>
+            <form action="signin.php" method="post">
+                <input type="text" style="width: 92.5%;" placeholder="Email" name="email" required>
+                <input type="password" style="width: 92.5%;" placeholder="Password" name="password" required>
+                <i class="fas fa-eye" id="eye-icon-signin"></i> <!-- Unique ID for Sign In -->
+                <button type="submit">Sign In</button>
+                <p style="color: #333;">Not yet registered?<a href="javascript:void(0);" onclick="toggleForm('signup')" style="text-decoration: blue; float: right;">Register now</a></p>
+            </form>
+        </div>
+        <div class="form-container" id="signup">
+            <h2>Register</h2>
+            <form action="signup.php" method="post" onsubmit="return validateRegistrationForm();">
+                <input type="text" style="width: 92.5%;" placeholder="Email" name="email" required>
+                <input type="password" style="width: 92.5%;" placeholder="Create Password" name="password" id="createPassword" required>
+                <i class="fas fa-eye" id="eye-icon-signup"></i> 
+                <input type="password" style="width: 92.5%;" placeholder="Re-enter Password" name="repassword" id="reEnterPassword" required>
+                <i class="fas fa-eye" id="eye-icon-repassword"></i>
+                <a href="javascript:void(0);"><button type="submit">Create Account</button></a>
+                <p style="color: #333;">Already registered?<a href="javascript:void(0);" onclick="toggleForm('signin')" style="text-decoration: blue; float: right;"> Sign in here</a></p>
+                <!-- This is the "Sign In" message that should be displayed after a successful registration -->
+                <p id="sign-in-message" style="color: #333;">Now you can sign in</p>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- java script -->
+<script>
+    function hideAllSections() {
+            var sections = document.querySelectorAll('.content');
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+        }
+
+    function showHomeSection() {
+        document.getElementById('home').style.display = 'flex';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize the sections and the form
+        toggleForm('signin');
+        initializeSections();
+        
+        // Add click event listeners for the navigation buttons
+        var loginButton = document.querySelector('a[onclick="toggleSection(\'login\')"]');
+        var registerButton = document.querySelector('a[onclick="toggleForm(\'signup\')"]');
+        if (loginButton && registerButton) {
+            loginButton.addEventListener('click', function() {
+                toggleSection('login');
+            });
+            registerButton.addEventListener('click', function() {
+                toggleForm('signup');
+            });
+        }
+
+        // Add a submit event listener to the signup form
+        var signupForm = document.getElementById('signup');
+        signupForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            var isFormValid = handleFormSubmission('signup');
+            if (isFormValid) {
+                toggleForm('signin');
+            }
+        });
+    });
+
+    // Function to toggle between login and registration forms
+    function toggleForm(formId) {
+        var signinForm = document.getElementById('signin');
+        var signupForm = document.getElementById('signup');
+        if (formId === 'signin') {
+            signinForm.style.display = 'block';
+            signupForm.style.display = 'none';
+            clearFormFields(signinForm);
+        } else if (formId === 'signup') {
+            signinForm.style.display = 'none';
+            signupForm.style.display = 'block';
+            clearFormFields(signupForm);
+        }
+        // Clear the "Now you can sign in" message
+        var signInMessage = document.getElementById('sign-in-message');
+        if (signInMessage) {
+            signInMessage.style.display = 'none';
+        }
+    }
+
+    function handleFormSubmission(formId) {
+        if (formId === 'signin') {
+            // Handle sign-in form submission
+            // You can add your sign-in logic here
+        } else if (formId === 'signup') {
+            // Handle sign-up form submission
+            var createPassword = document.getElementById('createPassword').value;
+            var reEnterPassword = document.getElementById('reEnterPassword').value;
+            if (createPassword !== reEnterPassword) {
+                return false;
+            }
+            // Show the "Now you can sign in" message
+            var signInMessage = document.getElementById('sign-in-message');
+            signInMessage.style.display = 'block';
+            return true;
+        }
+    }
+
+    function validateRegistrationForm() {
+    var createPassword = document.getElementById('createPassword').value;
+    var reEnterPassword = document.getElementById('reEnterPassword').value;
+
+    if (createPassword !== reEnterPassword) {
+        alert("Passwords do not match. Please re-enter the password.");
+        return false;
+    }
+
+    // You can add more validation logic here as needed.
+
+    // If all validation checks pass, return true to allow the form submission.
+    return true;
+}
+
+
+    // Function to toggle between sections
+    function toggleSection(sectionId) {
+        var sections = document.querySelectorAll('.content');
+        sections.forEach(function (section) {
+            section.style.display = 'none'; // Hide all sections
+        });
+        var selectedSection = document.getElementById(sectionId);
+        selectedSection.style.display = 'flex'; // Show the selected section
+        // Scroll to the top of the section
+        selectedSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function initializeSections() {
+        hideAllSections();
+        showHomeSection();
+    }
+
+    function clearFormFields(form) {
+        // Reset the form fields
+        var formInputs = form.querySelectorAll('input');
+        formInputs.forEach(function (input) {
+            input.value = '';
+        });
+    }
+</script>
+
+</body>
+
+</html>
