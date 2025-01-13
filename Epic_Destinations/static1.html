@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login/home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, rgba(255, 69, 0, 0.8), black); /* Sunset-like background */
+            color: #fff;
+            width: 250px;
+            position: fixed;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .logo-image {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        
+        .menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 10px 0;
+        }
+
+        .menu a {
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            transition: background-color 0.3s;
+            font-size: 24px;
+            display: block;
+            padding-left: 30px;
+        }
+
+        .menu a.active {
+            padding-top: 10px ;
+            padding-bottom: 10px;
+            background-color: #454545;
+        }
+        
+        .menu a:hover {
+            color: black;
+            /* background-color: black; */
+        }
+
+        /* Style for the dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style for the dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: rgba(255, 69, 0, 0.7);
+}
+
+/* Show the dropdown content when the mouse hovers over the dropdown link */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #454545;
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 250px; /* Set the width to match the navbar's width */
+        }
+
+        .section {
+            position: absolute;
+            top: 0;
+            left: 250px; /* Width of the navbar */
+            width: calc(100% - 250px);
+            height: 100%;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .objective-box {
+            align-items: center;
+            background: rgba(255, 69, 0, 0.7); /* Translucent sunset color (adjust the alpha value as needed) */
+            width: 50%;
+            border-radius: 10px; /* Rounded corners */
+            padding: 10px; /* Padding is the same on all sides */
+            margin: 0 auto; /* Center the box horizontally */
+            text-align: justify;
+        }
+        .rating {
+            align-tracks: center;
+            text-decoration: none;
+            display: block;
+            width: fit-content;
+            height: fit-content;
+            margin: 5px;
+            padding: 5px;
+            padding-top: 5px;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .rating:hover {
+            transform: scale(1.1);
+            background-color: #333;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>
+            <img src="logo.png" alt="Me" class="logo-image" style="margin-top: 20px;">
+            
+            <ul class="menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#wonders">Marvels India</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Seasonal Escapes&#9660;</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#summer">Summer</a></li>
+                        <li><a href="#rainy">Rainy</a></li>
+                        <li><a href="#winter">Winter</a></li>
+                    </ul>
+                </li>
+                <li><a href="#thankyou">Thank You!</a></li>
+            </ul>
+            
+        </div>
+        <div class="footer">
+            <p>&copy; Tour Recommendation</p>
+        </div>
+    </div>
+    <div class="content">
+        <!-- Your content sections go here -->
+        <section id="home" class="section" style="background-image: url(bg.jpg); background-size: cover; background-repeat: no-repeat;">
+            <div class="home-content">
+                <h1 style="text-align: center; font-size: 36px;">EPIC Destinations</h1>
+                <p style="text-align: center; font-size: 24px;">Tour Recommendation</p>
+        
+                <div class="objective-box">
+                    <ul><span style="font-weight: bold">Welcome to EPIC Destinations: Your Ultimate Travel Companion</span>
+                    <p>At EPIC Destinations, we redefine the art of travel planning, setting new standards for your adventures. Our name, "EPIC," encapsulates the essence of our platform, making it your go-to travel companion.</p> 
+                    <p style="font-weight: bold">Enhanced Personalized Itinerary Curation</p>
+                    </ul>
+                    <ul><li><span style="font-weight: 550;">Enhanced Adventures Await: </span>
+                        <br>Imagine travel recommendations that go beyond the ordinary. With EPIC Destinations, expect more than just the run-of-the-mill suggestions. We enhance your journeys with carefully curated experiences that enrich your exploration.</li>
+                        <li><span style="font-weight: 550;">Personalized for You: </span>
+                        <br>No two travelers are the same, and neither should their journeys be. We believe in the power of personalization. Our collaborative filtering technology tailors every recommendation to your unique preferences, ensuring your trips are a reflection of your dreams.</li>
+                        <li><span style="font-weight: 550;">Your Dream Itinerary: </span>
+                        <br>EPIC Destinations is more than a list of places to visit; it's your personal travel architect. We understand that a remarkable journey is not just about destinations but the entire adventure. Our focus is on crafting complete itineraries that encompass the essence of your wanderlust.</li>
+                        <li><span style="font-weight: 550;">Curation at Its Finest: </span>
+                        <br>In the heart of our system lies the art of curation. Our recommendations are born from the collective wisdom of our global community of travelers. Every suggestion is meticulously curated, ensuring that only the best, most authentic experiences find their way to your itinerary.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="content">
+        <!-- Your content sections go here -->
+        <section id="wonders" class="section" style="background-image: url(bg.jpg); background-size: cover; background-repeat: no-repeat;">
+            <div class="suggestions-content">
+                <h1 style="text-align: center; font-size: 36px;">Marvels India</h1>
+    
+                <div class="objective-box" style="padding: 30px;">
+                    <!-- <p>At our service, we take great pleasure in presenting a meticulously curated selection of remarkable destinations, all of which encompass the 7 wonders of India. These wonders represent the epitome of India's rich heritage and cultural diversity, and we are here to guide you through the marvels that await you. Start your journey by gazing up at the towering Gomateshwara statue in Shravanabelagola, a timeless testament to devotion and artistry. Then, wander through the mystical ruins of Hampi, where ancient history and striking landscapes converge, offering a glimpse into a bygone era. Next, experience the divine serenity of the Harmandir Sahib Golden Temple, a place where faith and architecture meld seamlessly.<br> <br>Continue your exploration with the intricate sculptures of Khajuraho, where you'll be captivated by the incredible craftsmanship and intricate detailing. The Konark Sun Temple, with its breathtaking architecture and intricate carvings, is another wonder on our list that should not be missed. Discover the remnants of Nalanda, an ancient center of learning, and soak in the intellectual and historical treasures that this site has to offer. Finally, culminate your journey at the iconic Taj Mahal, a symbol of love and architectural excellence that has enchanted visitors from all corners of the world for centuries. Our recommendations are designed to ensure that your voyage through these wonders is nothing short of extraordinary, offering an immersive and unforgettable experience.</p> -->
+                    <p>Our travel service is all about helping you discover the amazing places to visit in India, with a special focus on its historic monuments. India is a land full of fascinating historical buildings, and our team is here to suggest destinations that suit your interests. Whether you love history, architecture, or just want to explore unique spots in India, our recommendations will make your journey special. From the famous Taj Mahal, which tells a beautiful love story, to the stunning temples in Khajuraho known for their intricate sculptures, and the grand forts in Rajasthan that show India's royal past, we pick destinations that showcase India's historical treasures.<br> <br>Our suggestions also cover local food, customs, and fun experiences to enhance your trip. When you travel with us, you won't just see India's wonders; you'll experience them with all your senses. Our goal is to ensure your visit to these places becomes an unforgettable memory, making your adventure in India a journey full of rich culture and history.</p>
+                    <br>
+                    <div class="options">
+                        <a href="check/index.html" class="rating" >Marvels India</a>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </div>  
+    <div class="content">
+        <!-- Your content sections go here -->
+        <section id="summer" class="section" style="background-image: url(bg.jpg); background-size: cover; background-repeat: no-repeat;">
+            <div class="suggestions-content">
+                <h1 style="text-align: center; font-size: 36px;">Summer Escapes India</h1>
+    
+                <div class="objective-box" style="padding: 30px;">
+                    <p>As the scorching summer sun beckons, we are delighted to be your trusted source for expert travel recommendations tailored to the warm and vibrant season. Whether you seek a serene mountain escape, a refreshing coastal retreat, or a cultural odyssey, our selection of destinations to visit during the summer months offers something for every traveler. Picture yourself amidst the cool, misty landscapes of the Himalayas, where lush green valleys and pristine lakes provide respite from the heat. Alternatively, embrace the coastal charm of destinations like Goa or Bali, where the azure waters and golden beaches create an idyllic setting for relaxation and water sports. Our suggestions also encompass culturally rich cities where summer festivals and local traditions come alive, adding a unique and immersive dimension to your journey.<br> <br>From exploring the charming hill stations of Shimla and Manali to embarking on a road trip along the scenic Pacific Coast Highway, we guide you towards destinations that cater to your summer desires. Seek adventure in the tranquil backwaters of Kerala, embark on a wildlife safari in Jim Corbett National Park, or witness the ethereal beauty of cherry blossoms in Japan. With our expert suggestions, your summer travels are bound to be filled with unforgettable experiences and cherished memories. Let us be your compass in navigating the sunny season's most enticing destinations.</p>
+                    <br>
+                    <div class="options">
+                        <a href="summerfinal/index.html" class="rating" >Summer Escapes</a>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </div>  
+    <div class="content">
+        <!-- Your content sections go here -->
+        <section id="rainy" class="section" style="background-image: url(bg.jpg); background-size: cover; background-repeat: no-repeat;">
+            <div class="suggestions-content">
+                <h1 style="text-align: center; font-size: 36px;">Rainy Escapes India</h1>
+    
+                <div class="objective-box" style="padding: 30px;">
+                    <p>At our travel advisory service, we specialize in recommending destinations that truly shine during the rainy season. The monsoons offer a unique and enchanting experience for travelers, and we're here to guide you on a journey that embraces the beauty of rain. Whether you're drawn to lush, rain-soaked forests, serene coastal getaways with the soothing sounds of rainfall, or the dramatic allure of waterfalls at their peak, our suggestions span a range of preferences. From tropical paradises to cozy hill stations, we ensure your rainy season travel is a memorable and refreshing experience that celebrates the magic of this atmospheric time of year.<br> <br>Embrace the poetry of the rain from a cozy hillside cottage, embark on thrilling monsoon treks, or savor local delicacies at rain-kissed markets - our recommendations cater to various travel styles. Let us be your trusted source for destinations that come alive during the rainy season, offering you a unique perspective on the beauty of nature and culture in this special time of year.</p>
+                    <br>
+                    <div class="options">
+                        <a href="rainyfinal/index.html" class="rating" >Rainy Escapes</a>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </div>  
+    <div class="content">
+        <!-- Your content sections go here -->
+        <section id="winter" class="section" style="background-image: url(bg.jpg); background-size: cover; background-repeat: no-repeat;">
+            <div class="suggestions-content">
+                <h1 style="text-align: center; font-size: 36px;">Winter Escapes India</h1>
+    
+                <div class="objective-box" style="padding: 30px;">
+                    <p>As winter's chilly embrace envelops the world, our travel advisory service is here to offer you a selection of destinations that come alive with enchantment during this magical season. Whether you seek the cozy ambiance of snowy landscapes or the warmth of sun-soaked escapes, we've got you covered. Picture yourself sipping hot cocoa by a crackling fireplace in a charming cabin tucked away in the serene mountains, or strolling through historic streets adorned with festive lights and decorations. From the wintry wonderlands of the Northern Hemisphere to the sun-kissed beaches of the Southern Hemisphere, we provide tailored suggestions to ensure your winter getaway is nothing short of perfect.<br> <br>For those who relish the snow, we'll guide you to idyllic destinations where you can indulge in winter sports, from skiing down pristine slopes to ice skating on frozen lakes. If you'd rather escape the cold, we'll direct you to tropical paradises where you can bask in the sun and soak up the tranquil beauty of crystal-clear waters. Winter travel is a unique opportunity to create cherished memories, and our recommendations will help you make the most of this season, whether you're seeking adventure in the snow or a sun-drenched retreat.</p>
+                    <br>
+                    <div class="options">
+                        <a href="winterfinal/index.html" class="rating" >Winter Escapes</a>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </div>  
+    <div class="content">
+        <!-- Your content sections go here -->
+        <section id="thankyou" class="section" style="background-image: url(bg.jpg); background-size: cover; background-repeat: no-repeat;">
+            <div class="suggestions-content">
+                <h1 style="text-align: center; font-size: 36px;">Thank You For Using EPIC Destinations!!</h1>
+    
+                <div class="objective-box" style="padding: 30px;">
+                    <p>We would like to extend our heartfelt gratitude to all our users for choosing EPIC Destinations as their travel planning companion. Your trust and support have been instrumental in making our platform a success. It's your feedback, enthusiasm, and adventurous spirit that drive us to continually improve and innovate. We're committed to providing you with the best travel experiences, from personalized recommendations to comprehensive destination information. Your journey is our journey, and we are genuinely thankful for allowing us to be a part of your travel adventures.<br> <br>At EPIC Destinations, we take pride in assisting you on your travel adventures and making each trip a memorable one. We're excited about the future and our commitment to enhancing your travel experiences. As we grow and evolve, your feedback remains invaluable in shaping our platform to meet your needs and aspirations. Whether it's exploring new destinations or returning to your favorite places, we are here to make your travel planning as seamless and enjoyable as possible. Thank you for choosing EPIC Destinations, and we look forward to being your trusted companion on many more epic journeys to come.</p>
+                    <br>
+                    <div class="options">
+                        <a href="index.html" class="rating" >Logout</a>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </div>  
+        
+    <script>
+        // JavaScript to handle menu background change
+        const sections = document.querySelectorAll('.section');
+        const links = document.querySelectorAll('.menu a');
+
+        function showSection(target) {
+            sections.forEach(section => {
+                section.style.transform = 'translateX(100%)';
+            });
+            target.style.transform = 'translateX(0)';
+        }
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+
+                if (target) {
+                    showSection(target);
+                    // Remove the "active" class from all links
+                    links.forEach(link => link.classList.remove('active'));
+                    // Add the "active" class to the clicked link
+                    link.classList.add('active');
+                }
+            });
+        });     
+
+        // Show the home section by default when the page loads
+        showSection(sections[0]);
+    </script>
+     
+</body>
+</html>
